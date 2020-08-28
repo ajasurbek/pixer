@@ -41,7 +41,6 @@ body {
   padding: 0;
   font-family: "Product Sans", "Arial", sans-serif;
   box-sizing: border-box;
-
 }
 *,
 *::after,
@@ -54,14 +53,21 @@ body {
   padding: 0 24px;
 }
 .visually-hidden {
-position: absolute !important;
-clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-clip: rect(1px, 1px, 1px, 1px);
-padding:0 !important;
-border:0 !important;
-height: 1px !important; 
-width: 1px !important; 
-overflow: hidden;
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
+}
+.main-button {
+  padding: 8px 16px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--main-blue);
+  border-radius: 5px;
 }
 
 /* =====header====  */
@@ -95,24 +101,26 @@ overflow: hidden;
   margin: 0;
   padding: 0;
 }
-.header-item {
-  padding: 16px;
-}
-  .header-item:active {
-    background-color: rgba(25, 25, 25, 0.7);
-  }
-  .header-item:active a {
-    color: #ffffff;
+  .drop-father:hover .dropdown{
+    display: block;
   }
   .header-item:hover {
     box-shadow: inset 0px -3px 0 black;
   }
 .header-link {
+  display: block;
+  padding: 16px;
   font-size: 15px;
   line-height: 24px;
   color: #000000;
   text-decoration: none;
 }
+  .header-link:active {
+    background-color: rgba(25, 25, 25, 0.7);
+  }
+  .header-link:active {
+    color: #ffffff;
+  }
 .header-tel {
   padding: 5px 8px;
   margin-left: 16px;
@@ -133,4 +141,36 @@ overflow: hidden;
     opacity: 0.6;
     color: #ffffff;
     background-color: var(--main-blue);
+  }
+.drop-father {
+  position: relative;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  display: none;
+  margin: 0;
+  padding: 8px 0;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  list-style-type: none;
+}
+.dropdown-link {
+  display: inline-block;
+  width: 100%;
+  padding: 8px 16px;
+  color: #000000;
+  text-decoration: none;
+  white-space: nowrap;
+}
+  .dropdown-link:hover {
+    color: #fff;
+    background-color: var(--main-blue);
+  }
+  .dropdown-link:active {
+    opacity: 0.6;
   }
