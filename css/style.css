@@ -76,6 +76,12 @@ overflow: hidden;
 .logo-link {
   padding: 18px 0;
 }
+  .logo-link:hover {
+    opacity: 0.8;
+  }
+  .logo-link:active {
+    opacity: 0.4;
+  }
 .header-img {
   display: block;
   width: 58px;
@@ -92,6 +98,15 @@ overflow: hidden;
 .header-item {
   padding: 16px;
 }
+  .header-item:active {
+    background-color: rgba(25, 25, 25, 0.7);
+  }
+  .header-item:active a {
+    color: #ffffff;
+  }
+  .header-item:hover {
+    box-shadow: inset 0px -3px 0 black;
+  }
 .header-link {
   font-size: 15px;
   line-height: 24px;
@@ -99,13 +114,23 @@ overflow: hidden;
   text-decoration: none;
 }
 .header-tel {
-  padding: 8px;
+  padding: 5px 8px;
   margin-left: 16px;
   font-size: 15px;
   line-height: 24px;
   font-weight: 700;
   color: #ffffff;
+  border: 3px solid var(--main-blue);
   border-radius: 5px;
   background-color: var(--main-blue);
   text-decoration: none;
 }
+  .header-tel:hover {
+    color: var(--main-blue);
+    background-color: #ffffff;
+  }
+  .header-tel:active {
+    opacity: 0.6;
+    color: #ffffff;
+    background-color: var(--main-blue);
+  }
