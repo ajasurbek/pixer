@@ -77,7 +77,12 @@ body {
   white-space: nowrap;
   text-decoration: none;
 }
-
+  .main-button:hover {
+    background-color: rgba(0, 186, 252, 0.8);
+  }
+  .main-button:active {
+    opacity: 0.6;
+  }
 /* =====header====  */
 .header {
   position: fixed;
@@ -203,14 +208,96 @@ body {
   .business-text {
     margin: 16px 0;
   }
-  .business-link:hover {
-    background-color: rgba(0, 186, 252, 0.8);
-  }
-  .business-link:active {
-    opacity: 0.6;
-  }
   .business-video {
     border: none;
     border-radius: 5px;
   }
- 
+
+/* xizmatlar */
+.xizmatlar-heading {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.3;
+}
+.xizmatlar-text {
+  width: 720px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+}
+.xizmatlar-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  list-style-type: none;
+}
+.xizmatlar-item {
+  flex-shrink: 0;
+  width: 320px;
+  padding: 24px 0;
+  margin-top: 24px;
+  margin-right: 65px;
+  margin-bottom: 24px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.xizmatlar-item:last-child,
+.xizmatlar-item:nth-child(3) {
+  margin-right: 0;
+}
+.xizmatlar-link {
+  text-decoration: none;
+  color: #191919;
+}
+.text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .text-wrapper::before {
+    content: "";
+    width: 222px;
+    height: 130px;
+    margin-bottom: 16px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .website-illustration::before {
+    background-image: url("../img/website-illustration.svg");
+  }
+  .bot-illustration::before {
+    background-image: url("../img/bot-illustration.svg");
+  }
+  .smm-illustration::before {
+    background-image: url("../img/smm-illustration.svg");
+  }
+  .design-illustration::before {
+    background-image: url("../img/design-illustration.svg");
+  }
+  .crm-illustration::before {
+    background-image: url("../img/crm-illustration.svg");
+  }
+.link-heading {
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.link-text {
+  text-align: justify;
+  padding: 0 24px;
+}
+.xizmatlar-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.xizmatlar-link-btn {
+  margin-left: 16px;
+  text-decoration: underline;
+  color: var(--main-blue);
+}
